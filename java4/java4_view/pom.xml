@@ -15,8 +15,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>sk.itlearning.java4</groupId>
-			<artifactId>controller</artifactId>
+			<groupId>sk.itlearning.java</groupId>
+			<artifactId>java4_controller</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>

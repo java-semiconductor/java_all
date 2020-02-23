@@ -41,10 +41,13 @@
 			</dependency>
 			<dependency>
 				<groupId>org.openjfx</groupId>
-				<artifactId>javafx</artifactId>
+				<artifactId>javafx-controls</artifactId>
 				<version>15-ea+1</version>
-				<type>pom</type>
-				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-fxml</artifactId>
+				<version>15-ea+1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
