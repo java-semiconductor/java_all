@@ -18,6 +18,8 @@ class Viacrozmerne {
 			}
 		}
 
+		String [] names2 [] = { { "Mr. ", "Mrs. ", "Ms. " }, { "Smith", "Jones" } };
+		System.out.println(names2);
 	}
 
 }

@@ -29,6 +29,8 @@ public class Jednorozmerne {
 		for (int i : p3) {
 			System.out.println(i);
 		}
+		
+		//Return.obsahuje( ... doplnit volanie metody
 
 	}
 

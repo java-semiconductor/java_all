@@ -8,13 +8,12 @@ import java.io.IOException;
 public class ReadFromFile {
 
 	public static void main(String[] args) {
-		File f = new File("C:\\tmp\\subor.txt");
+		File f = new File("C:/tmp/subor.txt");
 
 		if (!f.exists()) {
 			return;
         }
 
-		// using try-with-resource to get automatic close of BufferedReader
 		try (BufferedReader br = new BufferedReader(new FileReader(f));) {
 			String line;
 			while ( (line = br.readLine()) != null) {
@@ -23,6 +22,7 @@ public class ReadFromFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

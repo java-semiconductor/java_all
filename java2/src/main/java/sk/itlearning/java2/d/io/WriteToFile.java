@@ -18,12 +18,11 @@ public class WriteToFile {
 			}
         }
 
-		// using try-with-resource to get automatic close of FileWriter
-		try (FileWriter fw = new FileWriter(f, true)) {
-			fw.append("Prvy riadok" + System.lineSeparator());
-			fw.append("Druhy riadok" + System.lineSeparator());
+		try {
+			FileWriter fw = new FileWriter(f, true);
+			fw.append("Prvy riadok\n");
+			fw.append("Druhy riadok\n");
 			fw.append("Treti riadok" + System.lineSeparator());
-			fw.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

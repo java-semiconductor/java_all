@@ -19,12 +19,24 @@ public class Main {
 			}
 			
 			try {
-				Class<Vypocet> clazz = (Class<Vypocet>) Class.forName(conf);
-				Constructor<Vypocet> constructor = clazz.getConstructor(int.class);
-				Vypocet v = constructor.newInstance(50);
+				Class<?> clazz = Class.forName(conf);
+				Constructor<?> constructor = clazz.getConstructor(int.class);
+				Vypocet v = (Vypocet) constructor.newInstance(50);
 				Method m = clazz.getMethod("vypocitaj");
 				System.out.println(m.invoke(v));
-			} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();				
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
 				e.printStackTrace();
 			}
 		}

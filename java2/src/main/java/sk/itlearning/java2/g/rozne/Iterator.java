@@ -2,6 +2,10 @@ package sk.itlearning.java2.g.rozne;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import sk.itlearning.java2.a.db.Obcan;
 
 public class Iterator {
 
@@ -18,10 +22,10 @@ public class Iterator {
 		while (i.hasNext()) {
 			System.out.println(i.next());
 		}
+		
+		Map<String, List<Obcan>> map = new TreeMap <> ();
+		System.out.println(map);
 
-		while (i.hasNext()) {
-			System.out.println(i.next());
-		}
 	}
 
 }

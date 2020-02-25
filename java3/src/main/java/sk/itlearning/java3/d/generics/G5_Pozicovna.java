@@ -3,7 +3,6 @@ package sk.itlearning.java3.d.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class G5_Pozicovna {
 
 	public static void main(String[] args) {
@@ -19,8 +18,7 @@ public class G5_Pozicovna {
 		System.out.println(pa.dostupneNaVypozicanie);
 		
 		pa.vrat(pozicane);
-		System.out.println(pa.dostupneNaVypozicanie);
-		
+		System.out.println(pa.dostupneNaVypozicanie);	
 	}
 	
 	static class PozicovnaAut {

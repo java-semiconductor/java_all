@@ -22,23 +22,14 @@ public class G4_Polymorph {
 	public static void main(String[] args) {
 
 		Muz[] muzi = new Muz[]{new Muz(), new Muz()};
-		Zena[] zeny = {new Zena(), new Zena()};
-		Clovek[] mz = {new Zena(), new Muz()};
-		
+
 		List<Muz> listMuzi = new ArrayList<Muz>(Arrays.asList(muzi));
 
 		List<Clovek> listLudia = new ArrayList<Clovek>();
 		listLudia.add(new Muz());
 		listLudia.add(new Zena());
 
-		// Nasledovna metoda funguje pre polia, pretoze pre polia existuje vynimka ArrayStoreException,
-		// ktora sa vyhodi pri pokuse o vlozenie objektu nespravneho typu.
-		
 		addClovek(muzi);
-		
-		// Rovnaka metoda pre genericke zoznamy nefunguje, pretoze kompilacia zmaze genericke typy,
-		// takze JVM vidi iba List, ktory prijima lubovolny objekt a JVM nema informaciu, akeho typu su prvky
-		// v zozname, takze nerozpozna ani pripadnu hrozbu vlozenia nespravneho typu. A preto je to rovno zakazane.
 		
 //		addClovek(listMuzi);
 

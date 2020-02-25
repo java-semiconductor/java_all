@@ -2,38 +2,32 @@ package sk.itlearning.java2.e.override;
 
 public class Zviera {
 
-	void urobNieco() {
-		System.out.println("som zviera");
-	}
-
-	void urobNieco(Zviera x) {
+	public Zviera urobNieco(Zviera x) {
 		System.out.println("som zviera s parametrom");
+		return new Zviera();
 	}
 
 	public static void main(String[] args) {
 		Zviera z = new Zviera();
 		Pes p = new Pes();
 		Zviera zp = new Pes();
-		z.urobNieco();
-		p.urobNieco();
-		z.urobNieco(z);
-		p.urobNieco(p);
-		p.urobNieco(zp);
+
+		zp.urobNieco(z);
+		zp.urobNieco(zp);
+		zp.urobNieco(p);
 	}
 }
 
 class Pes extends Zviera {
 
-	void urobNieco() {
-		System.out.println("som pes");
-	}
-
-	void urobNieco(Zviera x) {
+	public Zviera urobNieco(Zviera x) {
 		System.out.println("som pes zviera");
+		return new Pes();
 	}
 
-	void urobNieco(Pes x) {
+	public Zviera urobNieco(Pes x) {
 		System.out.println("som pes pes");
+		return new Zviera();
 	}
 
 }

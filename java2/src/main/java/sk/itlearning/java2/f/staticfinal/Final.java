@@ -1,7 +1,5 @@
 package sk.itlearning.java2.f.staticfinal;
 
-import java.math.BigDecimal;
-
 import sk.itlearning.java2.a.db.Obcan;
 
 public final class Final extends FinalParent {
@@ -21,7 +19,7 @@ public final class Final extends FinalParent {
 //		rudo = peter;
 
 		// vnutorny stav final premennej typu objekt sa menit moze
-		rudo.setKredit(new BigDecimal(100));
+		rudo.setMeno("Jano");
 	}
 
 	// nemozne prepisat (override) metodu predka, ktora je oznacena ako final

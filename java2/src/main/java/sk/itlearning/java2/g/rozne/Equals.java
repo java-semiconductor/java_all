@@ -10,13 +10,13 @@ public class Equals {
 
 		Obcan f2 = new Obcan("1", "P");
 
-		System.out.println(f1 == f2); // nespravne porovnavanie objektov
+		System.out.println(f1 == f2);
 
-		System.out.println(f1.equals(f2));
-
-		System.out.println(f1);
-
-		System.out.println(f2);
+		String s1 = "text";
+		
+		String s2 = "text";
+		
+		System.out.println(s1 == s2);
 
 	}
 

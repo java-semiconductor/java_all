@@ -3,7 +3,7 @@ package sk.itlearning.java2.g.rozne;
 public class Member {
 
 	// 1 clenske premenne
-	int a;
+	private int a;
 	private static int b;
 
 	// 2 clenske metody
@@ -14,12 +14,12 @@ public class Member {
 	// 3 konstruktory
 	public Member(int x) {
 		super();
-		a = x;
+		a = 10;
 	}
-
-	@SuppressWarnings("unused")
-	private Member() {
+	
+	public Member(double x) {
 		super();
+		a = 10;
 	}
 
 	// 4 vnorene triedy
@@ -41,7 +41,7 @@ public class Member {
 
 	// 5 inicializacne bloky
 	{
-		a = 8;
+		a = 10;
 	}
 
 	static {

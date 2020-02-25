@@ -14,18 +14,24 @@ public class PrimitivneTypy3 {
 		// explicitne (manualne) pretypovanie (musime zvazit pretecenie)
 		b = (byte) i;
 
-		// implicitne pretypovanie double -> float nefunguje
-		float f = 5.0f;
-
-		// implicitne pretypovanie float -> double
-		double d = f;
-
 		// implicitne pretypovania pri operaciach
-		System.out.println(10 / 3.0);
-		System.out.println(i + d);
+		System.out.println(10 / 3);
 
 		// od java 7 mozme pouzit oddelovac tisicov
 		System.out.println(9_876_543);
+		
+		// Unboxing
+		int u = Integer.valueOf(10);
+		System.out.println(u);
+
+		// Autoboxing
+		Integer a = 5;
+		System.out.println(a);
+
+		// Metody vo Wrapper triedach
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.valueOf("50"));
+
 	}
 
 }

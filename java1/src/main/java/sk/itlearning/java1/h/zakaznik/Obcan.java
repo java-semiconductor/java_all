@@ -1,32 +1,22 @@
 package sk.itlearning.java1.h.zakaznik;
 
-import java.math.BigDecimal;
-
-public class Obcan implements Zakaznik {
+public class Obcan extends Zakaznik {
 
 	private String rodneCislo;
-	
+
 	private String meno;
-	
-	private BigDecimal kredit;
+
+	public Obcan(String rodneCislo, String meno) { // Preco je toto zle?
+		this.rodneCislo = rodneCislo;
+		this.meno = meno;
+	}
 
 	public String getRodneCislo() {
 		return rodneCislo;
 	}
-	
-	public Obcan(String rodneCislo, String meno) {
-		setRodneCislo(rodneCislo);
-		setMeno(meno);
-	}
 
 	public void setRodneCislo(String rodneCislo) {
-		rodneCislo = rodneCislo.replace("/", "");
-		long rcc = Long.valueOf(rodneCislo);
-		if ( rcc % 11 == 0) {
-			this.rodneCislo = rodneCislo;
-		} else {
-			throw new IllegalArgumentException("Zadali ste neplatne rodne cislo");
-		}
+		this.rodneCislo = rodneCislo;
 	}
 
 	public String getMeno() {
@@ -36,38 +26,7 @@ public class Obcan implements Zakaznik {
 	public void setMeno(String meno) {
 		this.meno = meno;
 	}
-
-	public BigDecimal getKredit() {
-		return kredit;
-	}
-
-	public void setKredit(BigDecimal kredit) {
-		this.kredit = kredit;
-	}
 	
-	@Override
-	public String getId() {
-		return getRodneCislo();
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Obcan) {
-			return rodneCislo.equals( ((Obcan)obj).getRodneCislo() );
-		}
-		return false;
-	}
+	// doplnit validaciaRodnehoCisla, override equals a hashCode
 
-	@Override
-	public int hashCode() {
-		rodneCislo = rodneCislo.replace("/", "");
-		long rcc = Long.valueOf(rodneCislo);
-		return Long.valueOf(rcc/11).hashCode();
-	}
-
-	@Override
-	public String toString() {
-		return "Zakaznik; typ Obcan; RC = " + rodneCislo + "; Meno = " + meno;
-	}
-	
 }

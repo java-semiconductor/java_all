@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-import sk.itlearning.java3.o.clone.Obcan;
-
 public class G7_PrintMap {
 
 	public static void main(String[] args) {
@@ -20,10 +18,17 @@ public class G7_PrintMap {
 		
 		printMapObcan(mapaObcanov);
 		
+		printMapBigDecimal(mapaCisel);
 	}
 	
 	public static void printMapObcan(Map<String, Obcan> mapa) {
 		for (String key : mapa.keySet()) {
+			System.out.println(mapa.get(key));
+		}
+	}
+	
+	public static void printMapBigDecimal(Map<Integer, BigDecimal> mapa) {
+		for (Integer key : mapa.keySet()) {
 			System.out.println(mapa.get(key));
 		}
 	}

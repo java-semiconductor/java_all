@@ -6,7 +6,6 @@ public class InnerLoop {
 
 		int[] arrayOfInts = {2, 3, 5, 7, 9, 12, 17, 29, 45};
 
-		// labelled for cycle
 		for (int j = 0; j < arrayOfInts.length; j++) {
 
 			for (int i = 1; i <= 5; i++) {
