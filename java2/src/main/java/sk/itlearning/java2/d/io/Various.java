@@ -2,22 +2,31 @@ package sk.itlearning.java2.d.io;
 
 public class Various {
 
-	
-	
-//	New file system API (NIO 2.0)
-//	Those who worked with Java IO may still remember the headaches that framework caused. It was never easy to work seamlessly across operating systems or multi-file systems. There were methods such as delete or rename that behaved unexpected in most cases. Working with symbolic links was another issue. In an essence, the API needed an overhaul.
-//
-//	With the intention of solving the above problems with Java IO, Java 7 introduced an overhauled and in many cases new API.
-//
-//	The NIO 2.0 has come forward with many enhancements. It’s also introduced new classes to ease the life of a developer when working with multiple file systems.
-//
-//	Working with Path
-//	A new java.nio.file package consists of classes and interfaces such as Path, Paths, FileSystem, FileSystems and others.
-//
-//	A Path is simply a reference to a file path. It is the equivalent (and with more features) to java.io.File. The following snippet shows how to obtain a path reference to the “temp” folder:
-//
-//
-//	public voidpathInfo() {
+	// New file system API (NIO 2.0)
+	// Those who worked with Java IO may still remember the headaches that framework
+	// caused.
+	// It was never easy to work seamlessly across operating systems or multi-file
+	// systems.
+
+	// There were methods such as delete or rename that behaved unexpected in most
+	// cases. Working with symbolic links was another issue. In an essence, the API
+	// needed an overhaul.
+
+	// With the intention of solving the above problems with Java IO, Java 7
+	// introduced an overhauled and in many cases new API.
+
+	// The NIO 2.0 has come forward with many enhancements. It’s also introduced new
+	// classes to ease the life of a developer when working with multiple file
+	// systems.
+
+	// A new java.nio.file package consists of classes and interfaces such as Path,
+	// Paths, FileSystem, FileSystems and others.
+
+	// A Path is simply a reference to a file path. It is the equivalent (and with
+	// more features) to java.io.File. The following snippet shows how to obtain a
+	// path reference to the “temp” folder:
+
+	// public voidpathInfo() {
 //
 //	            Path path= Paths.get("c:\Temp\temp");
 //

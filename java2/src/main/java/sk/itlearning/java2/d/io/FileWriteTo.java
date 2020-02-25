@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteToFile {
+public class FileWriteTo {
 
 	public static void main(String[] args) {
 		File f = new File("C:\\tmp\\subor.txt");

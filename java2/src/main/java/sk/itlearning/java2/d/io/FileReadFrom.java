@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadFromFile {
+public class FileReadFrom {
 
 	public static void main(String[] args) {
 		File f = new File("C:/tmp/subor.txt");

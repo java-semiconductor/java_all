@@ -1,11 +1,12 @@
 package sk.itlearning.java3.h.threads;
 
 import java.io.File;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class T5_Concurrency {
 
@@ -15,21 +16,16 @@ public class T5_Concurrency {
 
 		SpocitajSubory s1 = new SpocitajSubory();
 		MutableLong ml = new MutableLong();
-		
-		Callable<String> callable = () -> {
-			s1.spocitajSubory(new File("P:"), ml);
+
+		Future<String> future = es.submit(() -> {
+			s1.spocitajSubory(new File("C:/Windows/System32/drivers"), ml);
 			return String.valueOf(ml.value);
-		};
-		
-		Future<String> future = es.submit(callable);
-	
+		});
+
 		try {
-			if (future.isDone()) {
-				System.out.println(future.get());
-			} else {
-//				future.cancel(true);
-			}
-		} catch (InterruptedException | ExecutionException e) {
+			String result = future.get(10, TimeUnit.SECONDS);
+			System.out.println(result);
+		} catch (InterruptedException | ExecutionException | TimeoutException e) {
 			e.printStackTrace();
 		}
 
