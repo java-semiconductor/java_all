@@ -38,8 +38,8 @@ public class DateTime {
 		LocalDate today = LocalDate.now();
 		System.out.println(today);
 		
-		LocalDateTime today2 = LocalDateTime.now();
-		System.out.println(today2);
+		LocalDateTime todayWithTime = LocalDateTime.now();
+		System.out.println(todayWithTime);
 		
 		System.out.println();
 		
@@ -51,7 +51,7 @@ public class DateTime {
 
 		System.out.println();
 		
-		LocalDateTime yesterday = today2.minus(60*60*24, ChronoUnit.SECONDS);
+		LocalDateTime yesterday = todayWithTime.minus(60*60*24, ChronoUnit.SECONDS);
 		System.out.println(yesterday);
 
 		System.out.println();
@@ -62,10 +62,11 @@ public class DateTime {
 		
 		System.out.println();
 
-		LocalDateTime db = LocalDateTime.now(ZoneId.of("Europe/Bratislava"));
-		LocalDateTime dn = LocalDateTime.now(ZoneId.of("America/New_York"));
-		System.out.println(db);
-		System.out.println(dn);
+		LocalDateTime ldt1 = LocalDateTime.now(ZoneId.of("Europe/Bratislava"));
+		System.out.println(ldt1);
+		
+		LocalDateTime ldt2 = LocalDateTime.now(ZoneId.of("America/New_York"));
+		System.out.println(ldt2);
 
 		System.out.println();
 		
@@ -74,11 +75,27 @@ public class DateTime {
 		LocalTime lt = LocalTime.now(ZoneId.of("Europe/Bratislava"));
 		System.out.println(lt);
 		
-		// Konverzia LocalDate alebo LocalDateTime na Date
-		Date d = Date.from(today.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		System.out.println();
 		
-		Date d1 = Date.from(db.toInstant(ZoneOffset.UTC));
+		Date date1 = new Date();
 		
+		// Convert Date to LocalDateTime
+		LocalDateTime ldt3 = LocalDateTime.ofInstant(date1.toInstant(), ZoneId.of("Europe/Bratislava"));
+		System.out.println(ldt3);
+
+		// Convert Date to LocalDate
+		LocalDate dt3 = ldt3.toLocalDate();
+		System.out.println(dt3);
+		
+		// Convert LocalDate to Date
+		Date date2 = Date.from(today.atStartOfDay(ZoneId.of("Europe/Bratislava")).toInstant());
+		System.out.println(date2);
+
+		// Convert LocalDateTime to Date
+		date2 = Date.from(todayWithTime.toInstant(ZoneOffset.UTC));
+		System.out.println(date2);
+		
+		date2 = Date.from(todayWithTime.toInstant(ZoneId.of("Europe/Bratislava").getRules().getOffset(new Date().toInstant())));
 	}
 
 }

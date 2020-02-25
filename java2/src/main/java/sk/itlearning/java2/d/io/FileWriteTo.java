@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class FileWriteTo {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		File f = new File("C:\\tmp\\subor.txt");
 

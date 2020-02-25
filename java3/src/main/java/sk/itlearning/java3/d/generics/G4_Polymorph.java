@@ -32,6 +32,8 @@ public class G4_Polymorph {
 		addClovek(muzi);
 		
 //		addClovek(listMuzi);
+		
+		addClovek(listLudia);
 
 		readLudia(listMuzi);
 		readSerializable(new ArrayList<Clovek>());

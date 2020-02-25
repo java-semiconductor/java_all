@@ -7,8 +7,8 @@ public class CatchDeclare {
 	public static void main(String[] args) {
 
 		BigDecimal a = new BigDecimal(10);
-		
-		BigDecimal b = a.divide(new BigDecimal(0));
+
+		System.out.println(a.divide(new BigDecimal(0)));
 
 		CustomBigDecimal c = new CustomBigDecimal(10.0);
 

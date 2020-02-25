@@ -16,7 +16,6 @@
     <module>java4</module>
 	<module>javafx</module>
 	<module>jaxrs_client</module>
-	<module>jaxrs_server</module>
   </modules>
 
 </project>
