@@ -6,9 +6,9 @@ public class CatchDeclare {
 
 	public static void main(String[] args) {
 
-//		BigDecimal a = new BigDecimal(10);
-//
-//		System.out.println(a.divide(new BigDecimal(0)));
+		BigDecimal a = new BigDecimal(10);
+
+		System.out.println(a.divide(new BigDecimal(0)));
 
 		CustomBigDecimal c = new CustomBigDecimal(10.0);
 
@@ -23,6 +23,8 @@ public class CatchDeclare {
 
 	private static class CustomBigDecimal extends BigDecimal {
 		
+		private static final long serialVersionUID = 1L;
+
 		public CustomBigDecimal(double d) {
 			super(d);
 		}

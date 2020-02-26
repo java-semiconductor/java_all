@@ -1,9 +1,8 @@
 package sk.itlearning.java1.h.zakaznik;
 
-import java.io.Serializable;
 import java.util.Objects;
 
-public class Obcan implements Zakaznik, Serializable {
+public class Obcan implements Zakaznik {
 
 	String rodneCislo;
 

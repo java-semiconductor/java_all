@@ -15,9 +15,13 @@ public class Zviera {
 		Pes p = new Pes();
 		Zviera zp = new Pes();
 
-//		zp.urobNieco(z);
-//		zp.urobNieco(zp);
-//		zp.urobNieco(p);
+		try {
+			zp.urobNieco(z);
+			zp.urobNieco(zp);
+			zp.urobNieco(p);
+		} catch (IOException e) {
+
+		}
 	}
 }
 

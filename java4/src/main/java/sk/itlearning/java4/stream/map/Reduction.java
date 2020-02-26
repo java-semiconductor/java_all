@@ -23,9 +23,13 @@ public class Reduction {
 		
 		Book b = ops.orElse(new Book());
 		
+		System.out.println(b);
+		
 		ops.ifPresent(v -> System.out.println(v.getPrice()));
 		
 		Book b2 = ops.get();
+		
+		System.out.println(b2);
 		
 	}
 	
