@@ -14,12 +14,10 @@ public class Member {
 	// 3 konstruktory
 	public Member(int x) {
 		super();
-		a = 10;
 	}
 	
 	public Member(double x) {
 		super();
-		a = 10;
 	}
 
 	// 4 vnorene triedy
@@ -45,7 +43,12 @@ public class Member {
 	}
 
 	static {
-		b = 5;
+		String user = System.getenv("USERNAME");
+		if (user == null) {
+			b = 10;
+		} else {
+			b = 20;
+		}
 	}
 
 }

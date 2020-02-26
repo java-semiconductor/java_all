@@ -46,7 +46,6 @@ public class SwitchKalendar3 {
 			System.out.println(mesiac.getPriemTeplota());
 			break;
 		default:
-			System.out.println("Neznamy mesiac");
 			break;
 		}
 	}

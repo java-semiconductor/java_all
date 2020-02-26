@@ -15,7 +15,7 @@ public class PrimitivneTypy3 {
 		b = (byte) i;
 
 		// implicitne pretypovania pri operaciach
-		System.out.println(10 / 3);
+		System.out.println(10 / 3.0);
 
 		// od java 7 mozme pouzit oddelovac tisicov
 		System.out.println(9_876_543);

@@ -24,20 +24,8 @@ public class Main {
 				Vypocet v = (Vypocet) constructor.newInstance(50);
 				Method m = clazz.getMethod("vypocitaj");
 				System.out.println(m.invoke(v));
-			} catch (ClassNotFoundException e) {
+			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				e.printStackTrace();				
-			} catch (NoSuchMethodException e) {
-				e.printStackTrace();
-			} catch (SecurityException e) {
-				e.printStackTrace();
-			} catch (InstantiationException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			} catch (InvocationTargetException e) {
-				e.printStackTrace();
 			}
 		}
 		

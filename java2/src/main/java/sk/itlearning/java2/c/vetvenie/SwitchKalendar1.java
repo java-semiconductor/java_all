@@ -42,9 +42,6 @@ public class SwitchKalendar1 {
 		case Kalendar1.NOVEMBER:
 			System.out.println("Priemerna teplota pre " + mesiac + " je 11 st.");
 			break;
-		case Kalendar1.DECEMBER:
-			System.out.println("Priemerna teplota pre " + mesiac + " je 12 st.");
-			break;
 		default:
 			System.out.println("Neznamy mesiac");
 			break;

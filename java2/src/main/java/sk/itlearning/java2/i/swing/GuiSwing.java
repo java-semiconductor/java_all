@@ -1,8 +1,6 @@
 package sk.itlearning.java2.i.swing;
 
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -31,11 +29,15 @@ public class GuiSwing {
 		
 		frame.setContentPane(panel);
 		
-		button.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				button.setText(button.getText() + " DoIt");
-			}
+//		button.addActionListener(new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				button.setText(button.getText() + " DoIt");
+//			}
+//		});
+		
+		button.addActionListener(e -> {
+			button.setText(button.getText() + " DoIt");	
 		});
 		
 		frame.pack();

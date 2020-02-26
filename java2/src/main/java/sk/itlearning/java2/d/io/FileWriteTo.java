@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class FileWriteTo {
 
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		File f = new File("C:\\tmp\\subor.txt");
 
@@ -19,8 +18,9 @@ public class FileWriteTo {
 			}
         }
 
-		try {
+		try (
 			FileWriter fw = new FileWriter(f, true);
+				) {
 			fw.append("Prvy riadok\n");
 			fw.append("Druhy riadok\n");
 			fw.append("Treti riadok" + System.lineSeparator());

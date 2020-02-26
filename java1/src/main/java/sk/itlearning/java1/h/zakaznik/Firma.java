@@ -1,14 +1,14 @@
 package sk.itlearning.java1.h.zakaznik;
 
-public class Firma extends Zakaznik {
+public class Firma implements Zakaznik {
 
 	private String ico;
 
 	private String nazov;
 
-	public Firma(String a, String b) { // Preco je toto zle?
-		ico = a;
-		nazov = b;
+	public Firma(String ico, String nazov) { // Preco je toto zle?
+		this.ico = ico;
+		this.nazov = nazov;
 	}
 
 	public String getIco() {
@@ -25,6 +25,11 @@ public class Firma extends Zakaznik {
 
 	public void setNazov(String nazov) {
 		this.nazov = nazov;
+	}
+
+	@Override
+	public String getId() {
+		return ico;
 	}
 
 }

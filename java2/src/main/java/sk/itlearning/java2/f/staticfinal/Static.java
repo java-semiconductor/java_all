@@ -9,14 +9,21 @@ public class Static {
 
 		System.out.println(j);
 
-//		System.out.println(i);
+		System.out.println(new Static().i);
 
-//		String k;
-//		System.out.println(k);
+		String k;
+		
+		if (j == 0) {
+			k = "";
+		}
+		
+		k = "";
+		
+		System.out.println(k);
 	}
 	
 	public void print() {
-//		System.out.println(i);
+		System.out.println(i);
 	}
 
 }

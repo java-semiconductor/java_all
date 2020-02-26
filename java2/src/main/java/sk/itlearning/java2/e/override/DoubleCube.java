@@ -4,7 +4,7 @@ public class DoubleCube extends Cube {
 
 	@Override
 	public double getObjem() {
-		return super.getObjem() * 2;
+		return getObjem() * 2;
 	}
 
 }

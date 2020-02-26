@@ -10,13 +10,13 @@ public class Equals {
 
 		Obcan f2 = new Obcan("1", "P");
 
-		System.out.println(f1 == f2);
+		System.out.println(f1.equals(f2));
 
 		String s1 = "text";
 		
-		String s2 = "text";
+		String s2 = new String("text");
 		
-		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
 
 	}
 

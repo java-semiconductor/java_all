@@ -1,5 +1,7 @@
 package sk.itlearning.java1.b.arrays;
 
+import sk.itlearning.java1.c.loops.Return;
+
 public class Jednorozmerne {
 
 	public static void main(String[] nazov) {
@@ -30,7 +32,7 @@ public class Jednorozmerne {
 			System.out.println(i);
 		}
 		
-		//Return.obsahuje( ... doplnit volanie metody
+		Return.obsahuje(new int[]{6, 7, 8}, 8);
 
 	}
 

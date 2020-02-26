@@ -6,7 +6,7 @@ public class StringBuffer {
 		
 		java.lang.StringBuffer kniha1 = new java.lang.StringBuffer();
 		
-		for (int i = 0; i < 100_000; i++) {
+		for (int i = 0; i < 300_000; i++) {
 			kniha1.append(String.valueOf(i));
 		}
 		

@@ -6,7 +6,7 @@ public class StringPool {
 
 		String vyskladanyString = "";
 
-		for (int i = 0; i < 50_000; i++) {
+		for (int i = 0; i < 300_000; i++) {
 			vyskladanyString += String.valueOf(i);
 		}
 

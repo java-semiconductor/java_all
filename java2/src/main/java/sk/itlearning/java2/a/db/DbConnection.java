@@ -10,13 +10,40 @@ public class DbConnection {
 
 	public static void main(String[] args) {
 
-		Connection connection;
-		Statement stmt;
-		ResultSet rs2;
-		try {
-			connection = DriverManager.getConnection("jdbc:postgresql:zakaznik","postgres", "sa");
-			stmt = connection.createStatement();
-			rs2 = stmt.executeQuery("select * from public.zakaznik");
+//		Connection connection = null;
+//		Statement stmt = null;
+//		ResultSet rs2 = null;
+//		try {
+//			connection = DriverManager.getConnection("jdbc:postgresql:zakaznik", "postgres", "sa");
+//			stmt = connection.createStatement();
+//			rs2 = stmt.executeQuery("select * from public.zakaznik");
+//			while (rs2.next()) {
+//				Obcan o = new Obcan("11", rs2.getString("name"));
+//				System.out.println(o);
+//			}
+//		} catch (SQLException e) {
+//			System.out.println("Nepodarilo sa pripojit na databazu");
+//		} finally {
+//			try {
+//				if (rs2 != null) {
+//					rs2.close();
+//				}
+//				if (stmt != null) {
+//					stmt.close();
+//				}
+//				if (connection != null) {
+//					connection.close();
+//				}
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//		}
+
+		try (
+				Connection connection = DriverManager.getConnection("jdbc:postgresql:zakaznik", "postgres", "sa");
+				Statement stmt = connection.createStatement();
+				ResultSet rs2 = stmt.executeQuery("select * from public.zakaznik");
+				) {
 			while (rs2.next()) {
 				Obcan o = new Obcan("11", rs2.getString("name"));
 				System.out.println(o);
@@ -24,8 +51,6 @@ public class DbConnection {
 		} catch (SQLException e) {
 			System.out.println("Nepodarilo sa pripojit na databazu");
 		}
-		
-		// chyba finally statement
 
 	}
 

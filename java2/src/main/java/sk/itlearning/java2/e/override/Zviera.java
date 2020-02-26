@@ -1,8 +1,11 @@
 package sk.itlearning.java2.e.override;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Zviera {
 
-	public Zviera urobNieco(Zviera x) {
+	Zviera urobNieco(Zviera x) throws IOException {
 		System.out.println("som zviera s parametrom");
 		return new Zviera();
 	}
@@ -12,15 +15,16 @@ public class Zviera {
 		Pes p = new Pes();
 		Zviera zp = new Pes();
 
-		zp.urobNieco(z);
-		zp.urobNieco(zp);
-		zp.urobNieco(p);
+//		zp.urobNieco(z);
+//		zp.urobNieco(zp);
+//		zp.urobNieco(p);
 	}
 }
 
 class Pes extends Zviera {
 
-	public Zviera urobNieco(Zviera x) {
+	@Override
+	public Pes urobNieco(Zviera x) throws FileNotFoundException {
 		System.out.println("som pes zviera");
 		return new Pes();
 	}

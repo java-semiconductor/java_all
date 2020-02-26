@@ -11,7 +11,7 @@ public class Iterator {
 
 	public static void main(String[] args) {
 
-		List<Integer> cisla = new ArrayList<Integer>();
+		List<Integer> cisla = new ArrayList<>();
 
 		cisla.add(1);
 		cisla.add(2);
@@ -23,7 +23,7 @@ public class Iterator {
 			System.out.println(i.next());
 		}
 		
-		Map<String, List<Obcan>> map = new TreeMap <> ();
+		Map<String, List<Obcan>> map = new TreeMap<>();
 		System.out.println(map);
 
 	}

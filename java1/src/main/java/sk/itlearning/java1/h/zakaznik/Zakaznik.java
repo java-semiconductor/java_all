@@ -1,9 +1,7 @@
 package sk.itlearning.java1.h.zakaznik;
 
-public class Zakaznik {
+public interface Zakaznik {
 
-	public String getId() {
-		return null;
-	}
+	String getId();
 	
 }

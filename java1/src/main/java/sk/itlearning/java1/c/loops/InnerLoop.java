@@ -6,11 +6,11 @@ public class InnerLoop {
 
 		int[] arrayOfInts = {2, 3, 5, 7, 9, 12, 17, 29, 45};
 
-		for (int j = 0; j < arrayOfInts.length; j++) {
+		nejakou_znackou: for (int j = 0; j < arrayOfInts.length; j++) {
 
 			for (int i = 1; i <= 5; i++) {
 				if (arrayOfInts[j] == 9) {
-					break;
+					break nejakou_znackou;
 				}
 				System.out.print(" " + i);
 			}

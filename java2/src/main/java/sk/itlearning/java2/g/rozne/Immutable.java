@@ -11,8 +11,8 @@ public class Immutable {
 			this.value = value;
 		}
 
-		void add(MutableNumber x) {
-			this.value += x.value;
+		MutableNumber add(MutableNumber x) {
+			return new MutableNumber(this.value + x.value);
 		}
 
 		@Override
@@ -25,16 +25,22 @@ public class Immutable {
 
 		MutableNumber a = new MutableNumber(100);
 
-		a.add(new MutableNumber(50));
+		a = a.add(new MutableNumber(50));
 
 		System.out.println(a);
 
 
 		BigDecimal b = new BigDecimal(100);
 
-		b.add(new BigDecimal(50));
+		b = b.add(new BigDecimal(50));
 
 		System.out.println(b);
+		
+		String s = "text";
+		
+		s = s.toUpperCase();
+		
+		System.out.println(s);
 	}
 
 }

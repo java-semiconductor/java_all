@@ -12,7 +12,7 @@ public class O2_Aritmeticke {
 		// + operator mozno pouzit aj pre spajanie (concatenation) retazcov
 		System.out.println("abc" + "def");
 
-		System.out.println("x" + 10 + 20 + 30);
+		System.out.println("x" + 10 * 20 + 30);
 		
 		// odcitanie
 		System.out.println(10 - 5);
