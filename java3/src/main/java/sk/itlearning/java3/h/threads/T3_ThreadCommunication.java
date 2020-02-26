@@ -24,15 +24,14 @@ public class T3_ThreadCommunication {
 		};
 		t1.start();
 
-		
 		try {
 			synchronized (s1) {
 				s1.wait();
-			}
+			};
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 		SpocitajSubory s2 = new SpocitajSubory();
 		

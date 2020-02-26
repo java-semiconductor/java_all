@@ -11,11 +11,16 @@ public class FlowNotBlocked {
 		
 		final LocalDateTime start = LocalDateTime.now();
 		
-		new Thread(new SpocitajRunnable(start)).start();
-		new Thread(new SpocitajRunnable(start)).start();
-		new Thread(new SpocitajRunnable(start)).start();
-		new Thread(new SpocitajRunnable(start)).start();
-		new Thread(new SpocitajRunnable(start)).start();
+//		new Thread(new SpocitajRunnable(start)).start();
+//		new Thread(new SpocitajRunnable(start)).start();
+//		new Thread(new SpocitajRunnable(start)).start();
+//		new Thread(new SpocitajRunnable(start)).start();
+//		new Thread(new SpocitajRunnable(start)).start();
+		
+		
+		for (int i = 0; i < 10000; i++) {
+			new Thread(new SpocitajRunnable(start)).start();
+		}
 		
 	}
 	

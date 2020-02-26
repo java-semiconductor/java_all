@@ -14,6 +14,7 @@ public class Test {
 		
 		for (Zakaznik o : pz) {
 			System.out.println(o.getId());
+			System.out.println(Zakaznik.getClassName());
 		}
 		
 		Object[] po = {o1, o2, f1, f2};
@@ -30,6 +31,7 @@ public class Test {
 		System.out.println(o1.equals(o2));
 		
 		
+	
 		
 	}
 

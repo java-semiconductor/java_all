@@ -16,21 +16,32 @@ public class G7_PrintMap {
 		mapaCisel.put(1, BigDecimal.valueOf(10));
 		mapaCisel.put(2, BigDecimal.valueOf(20));
 		
-		printMapObcan(mapaObcanov);
+//		printMapObcan(mapaObcanov);
+//		
+//		printMapBigDecimal(mapaCisel);
 		
-		printMapBigDecimal(mapaCisel);
+		printAnyMap(mapaObcanov);
+		
+		printAnyMap(mapaCisel);
 	}
 	
-	public static void printMapObcan(Map<String, Obcan> mapa) {
-		for (String key : mapa.keySet()) {
-			System.out.println(mapa.get(key));
-		}
-	}
+//	public static void printMapObcan(Map<String, Obcan> mapa) {
+//		for (String key : mapa.keySet()) {
+//			System.out.println(mapa.get(key));
+//		}
+//	}
+//	
+//	public static void printMapBigDecimal(Map<Integer, BigDecimal> mapa) {
+//		for (Integer key : mapa.keySet()) {
+//			System.out.println(mapa.get(key));
+//		}
+//	}
 	
-	public static void printMapBigDecimal(Map<Integer, BigDecimal> mapa) {
-		for (Integer key : mapa.keySet()) {
-			System.out.println(mapa.get(key));
-		}
+	public static <K, V> void printAnyMap(Map<K, V> mapa) {
+//		for (K key: mapa.keySet()) {
+//			System.out.println(mapa.get(key));
+//		}
+		mapa.forEach((k, v) -> System.out.println(v));
 	}
 	
 }

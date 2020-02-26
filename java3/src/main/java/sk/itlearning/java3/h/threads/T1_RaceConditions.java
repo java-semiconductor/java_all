@@ -21,7 +21,7 @@ public class T1_RaceConditions {
 		Runnable r1 = new Runnable() {
 			@Override
 			public void run() {
-				for (int i = 0; i < 1000000; i++) {
+				for (int i = 0; i < 1000; i++) {
 					c.increment();
 				}
 			}
@@ -30,7 +30,7 @@ public class T1_RaceConditions {
 		Runnable r2 = new Runnable() {
 			@Override
 			public void run() {
-				for (int i = 0; i < 1000000; i++) {
+				for (int i = 0; i < 1000; i++) {
 					c.decrement();
 				}
 			}
@@ -39,13 +39,13 @@ public class T1_RaceConditions {
 		new Thread(r1).start();
 		new Thread(r2).start();
 		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		
-//		while (Thread.activeCount() > 1);
+		while (Thread.activeCount() > 1);
 		
 		if (c.value != 0) {
 			System.out.println(c.value);

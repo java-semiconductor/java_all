@@ -23,7 +23,7 @@ public class T4_MethodTimeout {
 			Runnable casovoNarocnyBlok = new Runnable() {
 				@Override
 				public void run() {
-				    String fileName = "C:\\test\\a.txt";
+				    String fileName = "C:\\tmp\\a.txt";
 				    File file = new File(fileName);
 				    FileReader fr = null;
 				    while (fr == null && !timeout) {

@@ -23,8 +23,8 @@ public class T5_Concurrency {
 		});
 
 		try {
-			String result = future.get(10, TimeUnit.SECONDS);
-			System.out.println(result);
+			System.out.println( future.get(10, TimeUnit.SECONDS) );
+			System.out.println( future.get());
 		} catch (InterruptedException | ExecutionException | TimeoutException e) {
 			e.printStackTrace();
 		}

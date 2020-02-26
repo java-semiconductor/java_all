@@ -10,7 +10,7 @@ public class G5_Pozicovna {
 		listAuto.add(new Auto("BMW"));
 		listAuto.add(new Auto("Audi"));
 		
-		PozicovnaAut pa = new PozicovnaAut(listAuto);
+		Pozicovna<Auto> pa = new Pozicovna<>(listAuto);
 		System.out.println(pa.dostupneNaVypozicanie);
 		
 		Auto pozicane = pa.pozicaj();
@@ -18,21 +18,36 @@ public class G5_Pozicovna {
 		System.out.println(pa.dostupneNaVypozicanie);
 		
 		pa.vrat(pozicane);
-		System.out.println(pa.dostupneNaVypozicanie);	
+		System.out.println(pa.dostupneNaVypozicanie);
+		
+		List<Saty> listSaty = new ArrayList<>();
+		listSaty.add(new Saty("svadobne"));
+		listSaty.add(new Saty("karnevalove"));
+		
+		Pozicovna<Saty> ps = new Pozicovna<>(listSaty);
+		System.out.println(ps.dostupneNaVypozicanie);
+		
+		Saty pozicaneSaty = ps.pozicaj();
+		System.out.println(ps.dostupneNaVypozicanie);
+		
+		ps.vrat(pozicaneSaty);
+		System.out.println(ps.dostupneNaVypozicanie);
+		
+		
 	}
 	
-	static class PozicovnaAut {
-		private List<Auto> dostupneNaVypozicanie;
+	static class Pozicovna<T> {
+		private List<T> dostupneNaVypozicanie;
 
-		public PozicovnaAut(List<Auto> dostupneNaVypozicanie) {
+		public Pozicovna(List<T> dostupneNaVypozicanie) {
 			this.dostupneNaVypozicanie = dostupneNaVypozicanie;
 		}
 
-		public Auto pozicaj() {
+		public T pozicaj() {
 			return dostupneNaVypozicanie.remove(0);
 		}
 
-		public void vrat(Auto t) {
+		public void vrat(T t) {
 			dostupneNaVypozicanie.add(t);
 		}
 	}

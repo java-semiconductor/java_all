@@ -31,5 +31,10 @@ public class Firma implements Zakaznik {
 	public String getId() {
 		return ico;
 	}
+	
+	@Override
+	public String getName() {
+		return this.nazov;
+	}
 
 }
