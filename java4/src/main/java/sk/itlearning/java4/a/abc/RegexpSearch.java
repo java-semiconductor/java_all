@@ -28,7 +28,7 @@ public class RegexpSearch {
 
 		while (m.find()) {
 			pocetVyskytov++;
-			System.out.println("najdeny vyskyt na pozicii " + m.start() + " " + text.substring(m.start()));
+			System.out.println("najdeny vyskyt na pozicii " + m.start() + " " + text.substring(m.start(), m.end()));
 		}
 
 		System.out.println(); // prazdny riadok do konzoly
@@ -41,7 +41,7 @@ public class RegexpSearch {
 		
 		String mail = "0abcdef@yahoo.com";
 		
-		System.out.println(mail.matches("^[\\w,_,-,.]*@[\\w]*\\.com$"));
+		System.out.println(mail.matches("[\\w,_,-,.]*@\\w*\\.com"));
 		
 		// "abc874"
 		

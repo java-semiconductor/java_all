@@ -31,6 +31,25 @@ public class Main {
 			System.out.println(f);
 		}
 		
+		params = new CsvReaderParams();
+		
+		params = new CsvReaderParams();
+		params.setBatchSize(10);
+		params.setCharset(StandardCharsets.ISO_8859_1);
+		params.setCsvFile(Main.class.getResourceAsStream("firmy.csv"));
+		params.setCsvSeparator(';');
+		params.setSkipLines(1);
+		
+		params.getMappingList().add(new CsvMapping().setCsvIndex(0).setFieldName("id"));
+		params.getMappingList().add(new CsvMapping().setCsvIndex(1).setFieldName("name"));
+		params.getMappingList().add(new CsvMapping().setCsvIndex(2).setFieldName("trzby"));
+		
+		FirmaCsvImportBean ib = new FirmaCsvImportBean();
+		
+		List<Firma> firmy = ib.getNextBatch(params);
+		
+		firmy.forEach(f -> System.out.println(f));
+		
 	}
 	
 }

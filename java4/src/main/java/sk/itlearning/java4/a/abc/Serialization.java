@@ -18,12 +18,14 @@ public class Serialization extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public JTextArea jt = new JTextArea();
+	
+	public String nova;
 
 	transient public String nazov;
 
 	public static void main(String[] args) {
 
-		File f = new File("C:/test/gui");
+		File f = new File("C:/tmp/gui");
 
 		Serialization sjf = null;
 		
@@ -67,7 +69,7 @@ public class Serialization extends JFrame {
 	}
 
 	private static void serialize(Object o) {
-		File f = new File("C:/test/gui");
+		File f = new File("C:/tmp/gui");
 		if (!f.exists()) {
 			try {
 				f.createNewFile();
