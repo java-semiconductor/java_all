@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import sk.itlearning.java4.book.model.Book;
@@ -18,10 +19,13 @@ public class MainController {
 	
 	ObservableList<Book> data;
 	
+	@FXML
 	TableView<Book> xmlDataTable;
-	
+
+	@FXML
 	TableColumn<Book, String> c1;
 
+	@FXML
 	TableColumn<Book, String> c2;
 	
 	public void updateTable() {

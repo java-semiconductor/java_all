@@ -24,6 +24,23 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.4</version>
+				<configuration>
+					<stripDebug>true</stripDebug>
+					<compress>2</compress>
+					<noHeaderFiles>true</noHeaderFiles>
+					<noManPages>true</noManPages>
+					<launcher>javafx</launcher>
+					<jlinkImageName>javafx</jlinkImageName>
+					<jlinkZipName>javafxzip</jlinkZipName>
+					<mainClass>sk.itlearning.java4.gui.Main</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencies>
