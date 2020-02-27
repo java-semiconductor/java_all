@@ -9,7 +9,6 @@
   <packaging>pom</packaging>
   
   <modules>
-    <module>parent</module>
     <module>java1</module>
     <module>java2</module>
     <module>java3</module>
