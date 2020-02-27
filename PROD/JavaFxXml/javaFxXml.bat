@@ -1,1 +1,0 @@
-C:\devel\jdk-11.0.6\bin\java.exe --add-modules=javafx.controls -jar javaFxXml.jar
