@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "name": "MLA",
+      "records": [
+        {
+          "date": {
+            "year": 2019,
+            "month": 12,
+            "day": 30
+          },
+          "tasks": [
+            {
+              "name": "Default Startup Task",
+              "created": "Dec 30, 2019, 8:26:42 PM",
+              "totalTime": 191,
+              "running": false,
+              "intervals": [
+                {
+                  "from": "Dec 30, 2019, 8:26:42 PM",
+                  "to": "Dec 30, 2019, 8:29:43 PM"
+                },
+                {
+                  "from": "Dec 31, 2019, 2:01:49 AM",
+                  "to": "Dec 31, 2019, 2:01:59 AM"
+                }
+              ]
+            },
+            {
+              "name": "Testing okaml portal funktionalities after major update",
+              "created": "Dec 30, 2019, 8:29:43 PM",
+              "totalTime": 1872,
+              "running": false,
+              "intervals": [
+                {
+                  "from": "Dec 30, 2019, 8:29:43 PM",
+                  "to": "Dec 30, 2019, 9:00:45 PM"
+                },
+                {
+                  "from": "Dec 31, 2019, 2:01:59 AM",
+                  "to": "Dec 31, 2019, 2:02:09 AM"
+                }
+              ]
+            },
+            {
+              "name": "Fixing file upload",
+              "created": "Dec 30, 2019, 9:00:45 PM",
+              "totalTime": 7065,
+              "running": false,
+              "intervals": [
+                {
+                  "from": "Dec 30, 2019, 9:00:45 PM",
+                  "to": "Dec 30, 2019, 10:58:30 PM"
+                }
+              ]
+            },
+            {
+              "name": "Testing fixed file upload component",
+              "created": "Dec 30, 2019, 10:58:30 PM",
+              "totalTime": 4255,
+              "running": false,
+              "intervals": [
+                {
+                  "from": "Dec 30, 2019, 10:58:30 PM",
+                  "to": "Dec 31, 2019, 12:09:25 AM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

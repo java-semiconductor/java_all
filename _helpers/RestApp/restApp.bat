@@ -1,0 +1,1 @@
+C:\devel\jdk-11.0.6\bin\java.exe -jar payara-micro-5.194.jar --deploy restapp.war --port 8080
