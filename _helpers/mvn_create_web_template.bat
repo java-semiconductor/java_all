@@ -1,1 +1,0 @@
-C:\devel\apache-maven-3.6.3\bin\mvn archetype:generate -DgroupId=sk.itlearning -DartifactId=jaxrs_server -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
