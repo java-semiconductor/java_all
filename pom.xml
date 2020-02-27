@@ -17,7 +17,8 @@
     <module>javafx</module>
     <module>jaxrs_client</module>
     <module>jaxrs_se_server</module>
-    <module>jarxs_server</module>
+    <module>jaxrs_server</module>
+	<module>springrs_server</module>
   </modules>
 
 </project>
