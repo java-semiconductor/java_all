@@ -10,7 +10,7 @@ public class FilterOld {
 
 	public static void main(String[] args) {
 
-		String relPath = "src/main/resources/sk/itlearning/java4/a/xml/book.xml";
+		String relPath = "src/main/resources/sk/itlearning/java4/book/controller/book.xml";
 
 		List<String> lines = new ArrayList<>();
 		

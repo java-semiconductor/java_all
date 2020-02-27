@@ -4,7 +4,7 @@ import java.util.function.Supplier;
 
 public class DefferedLog {
 
-	static int l = 2;
+	static int l = 3;
 	
 	public static void main(String[] args) {
 	
@@ -17,13 +17,13 @@ public class DefferedLog {
 	}
 	
 	static void info(Supplier<String> s) {
-		if (l <= 1) {
+		if (l >= 3) {
 			System.out.println(s.get());
 		}
 	}
 	
 	static void info(String s) {
-		if (l <= 1) {
+		if (l >= 3) {
 			System.out.println(s);
 		}
 	}

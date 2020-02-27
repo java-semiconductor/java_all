@@ -1,18 +1,23 @@
 package sk.itlearning.java4.stream.filter;
 
-import java.util.List;
-
-import sk.itlearning.java4.stream.file.F2;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
 
 public class FilterPredicateParallel {
 
 	public static void main(String[] args) {
 
-		List<String> lines = F2.getBookLines();
+		String relPath = "src/main/resources/sk/itlearning/java4/book/controller/book.xml";
 		
-		long count = lines.parallelStream().filter(l -> l.contains("</book>")).count();
-		
-		System.out.println(count);
+		try {		
+			
+			Files.lines(Paths.get(relPath)).parallel().filter(l -> l.contains("</book>")).collect(Collectors.toList());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

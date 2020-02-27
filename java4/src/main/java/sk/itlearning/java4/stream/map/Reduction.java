@@ -16,6 +16,11 @@ public class Reduction {
 				.filter(e -> e.getPrice() < 20f)
 				.max( (a, b) -> Float.valueOf(a.getPrice()).compareTo(Float.valueOf(b.getPrice())));
 		
+//		Book b = ops.get();
+//		if (b != null) {
+//			b.setPrice(25);
+//		}
+		
 		ops.ifPresent(v -> v.setPrice(100));
 		
 		ops.ifPresent(v -> System.out.println(v.getId()));
@@ -24,12 +29,6 @@ public class Reduction {
 		Book b = ops.orElse(new Book());
 		
 		System.out.println(b);
-		
-		ops.ifPresent(v -> System.out.println(v.getPrice()));
-		
-		Book b2 = ops.get();
-		
-		System.out.println(b2);
 		
 	}
 	

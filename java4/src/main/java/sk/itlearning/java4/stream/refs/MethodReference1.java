@@ -21,10 +21,11 @@ public class MethodReference1 {
 		
 		String[] strings = { "B", "c", "d", "a" };
 		
+		Stream<String> strings2 = Stream.of( "B", "c", "d", "a" );
 		
 		Arrays.asList(strings).forEach(p -> System.out.println(p));
 		
-		Arrays.asList(strings).forEach(System.out::println);
+		strings2.forEach(System.out::println);
 		
 		
 		Arrays.sort(strings, (a, b) -> a.compareToIgnoreCase(b));

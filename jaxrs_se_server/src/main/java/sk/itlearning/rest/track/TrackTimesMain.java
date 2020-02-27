@@ -23,7 +23,7 @@ public class TrackTimesMain {
 		appFrame.setResizable(false);
 		appFrame.setAlwaysOnTop(true);
 		appFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		appFrame.setBounds(100, 100, 200, 100);
+		appFrame.setBounds(100, 100, 400, 150);
 		appFrame.setVisible(true);
 
 		// GUI COMPONENTS
@@ -47,7 +47,7 @@ public class TrackTimesMain {
 		panel.add(startBtn);
 		panel.add(stopBtn);
 
-		appFrame.setSize(new Dimension(400, 200));
+		appFrame.setSize(new Dimension(600, 200));
 
 		appFrame.setContentPane(panel);
 
