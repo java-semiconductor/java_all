@@ -1,50 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    	
   
   <modelVersion>4.0.0</modelVersion>
-    	
-  
   <groupId>sk.itlearning.java</groupId>
-    	
-  
   <artifactId>java_all</artifactId>
-    	
-  
   <version>1.0-SNAPSHOT</version>
-    	
   
   <packaging>pom</packaging>
-    	
-  
   
   <modules>
-            
-    
     <module>parent</module>
-            
-    
     <module>java1</module>
-            
-    
     <module>java2</module>
-            
-    
     <module>java3</module>
-            
-    
     <module>java4</module>
-        	
-    
     <module>javafx</module>
-        	
-    
     <module>jaxrs_client</module>
-          
-    
     <module>jaxrs_se_server</module>
     <module>jarxs_server</module>
   </modules>
-    
 
 </project>
