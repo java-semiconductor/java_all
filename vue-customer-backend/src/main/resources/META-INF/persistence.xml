@@ -10,4 +10,13 @@
 		<mapping-file>META-INF/eclipselink-orm.xml</mapping-file>
 	</persistence-unit>
 
+	<persistence-unit name="DDL_GEN" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<mapping-file>META-INF/eclipselink-orm.xml</mapping-file>
+		<properties>
+			<property
+				name="javax.persistence.schema-generation.scripts.action" value="create" />
+		</properties>
+	</persistence-unit>
+
 </persistence>

@@ -1,2 +1,2 @@
 rmdir /s /q pmroot
-C:/devel/jdk-11.0.5/bin/java.exe -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8003 -jar C:/devel/payara-micro-5.193.jar --deploy target/restapi.war --port 8083 --rootDir pmroot --domainConfig domain.xml
+C:/devel/jdk-11.0.6/bin/java.exe -Xms1g -Xmx1g -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8003 -jar C:\devel\payara-micro-5.194.jar --deploy target/restapi.war --port 8083 --rootDir pmroot --domainConfig domain.xml
